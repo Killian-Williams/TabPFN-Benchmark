@@ -1,4 +1,4 @@
-# TabPFN Benchmark
+<img width="2080" height="800" alt="learning_curve" src="https://github.com/user-attachments/assets/01b407b1-31cb-4581-805d-1d1db5765fce" />
 
 
 
