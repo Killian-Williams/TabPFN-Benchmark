@@ -1,3 +1,35 @@
+# TabPFN comparative experiments
+
+Research code comparing TabPFN v2 with logistic regression, random forest,
+XGBoost, LightGBM, CatBoost, and a dummy-prior baseline on binary tabular tasks.
+The experiments examine training-data scarcity, missing predictors, class
+imbalance, and distribution shift under fixed model configurations.
+
+## Project status
+
+**Initial source-code release. Experiments B–D are unfinished.** Their code is
+included for development and transparency, not as a completed research result.
+
+| Experiment | Question | Status in this release |
+|---|---|---|
+| [A](experiment%20A/README.md) | Performance as training data become scarce | Implementation and recorded validation available; this release does not certify completion of the current full benchmark. |
+| [B](experiment%20B/README.md) | Robustness to missing predictor values | **Unfinished — work in progress.** Full evaluation, verification, and interpretation remain pending. |
+| [C](experiment%20C/README.md) | Robustness to class imbalance | **Unfinished — work in progress.** Full evaluation, verification, and interpretation remain pending. |
+| [D](experiment%20D/README.md) | Performance under distribution shift | **Unfinished — work in progress.** Full evaluation, verification, and interpretation remain pending. |
+
+Smoke runs test execution; their scores are not final benchmark evidence.
+Partial runs, old adjacent result files, and archived exploratory analyses must
+not be presented as completed results for the current protocol. No overall
+model ranking or supported TabPFN advantage is claimed by this README.
+
+## Current datasets and protocol
+
+The 2026-11-09 dataset revision uses Titanic, breast cancer, Olist orders,
+Resort Hotel, and online shoppers for A–C. D uses Resort Hotel and online
+shoppers. Online Retail II is retired from active defaults; retained retail
+code may still supply helpers used elsewhere.
+
+Read [data setup](data/README.md) before running anything. The experiment-level
 `DATASET_UPDATE.md` files supersede older dataset descriptions in their README
 and status records. Start with [A's dataset revision](experiment%20A/DATASET_UPDATE.md).
 In particular, Olist predicts canceled versus delivered orders, not late delivery.
@@ -6,6 +38,7 @@ Hotel and shoppers are retrospective classification tasks. Shoppers has month
 labels but no year or full dates; D's Sep–Dec cohort is not a verified
 chronological forecast. A–C and D intentionally use different hotel feature
 sets and evaluation populations. See each experiment's protocol for details.
+
 
 ## Repository layout
 
